@@ -11,8 +11,7 @@ def test_collect_01(login_fix):
     r = s.post(url, data=data)
     print(r.text)
 
-    assert r.json()["isCollect"] == "yes"
-    assert r.json()["collectNum"] == 1
+    assert r.json()["code"] == 0
 
 if __name__ == "__main__":
     pytest.main(["-v","test_collect.py"])
